@@ -301,14 +301,14 @@ switch (SampleFormat)
       if (TIF.BitsPerSample(1) == 32)
          % - Single-precision real value
          TIF.classname = 'single';
-         [INFO.MaxSampleValue] = realmax('single');
-         [INFO.MinSampleValue] = -realmax('single');
+         [INFO.MaxSampleValue] = deal(realmax('single'));
+         [INFO.MinSampleValue] = deal(-realmax('single'));
 
       else
          % - Double-precision real value
          TIF.classname = 'double';
-         [INFO.MaxSampleValue] = realmax('double');
-         [INFO.MinSampleValue] = -realmax('double');
+         [INFO.MaxSampleValue] = deal(realmax('double'));
+         [INFO.MinSampleValue] = deal(-realmax('double'));
       end
       
    otherwise
